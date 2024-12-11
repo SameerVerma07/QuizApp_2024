@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct QuizView: View {
     var body: some View {
         NavigationView {
@@ -19,6 +18,8 @@ struct QuizView: View {
         }
     }
 }
+
+
 
 struct QuizRow: View {
     let title: String
@@ -34,9 +35,7 @@ struct QuizRow: View {
             }
             .buttonStyle(.borderedProminent)
             .fullScreenCover(isPresented: $isPresentingQuiz) {
-//                NavigationStack {
                     QuizDetailView(title: title)
-//                }
             }
         }
         .padding(.vertical, 8)

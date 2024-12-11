@@ -16,19 +16,15 @@ struct QuizDetailView: View {
         NavigationStack {
             switch title {
             case "Marvel Quiz":
-                MarvelQuiz()
+                QuizBody(title: title)
                 
             case "Geography Quiz":
-                Text("Explore the world with our Geography Quiz!")
-                    .font(.title2)
-                    .multilineTextAlignment(.center)
-                    .padding()
+                QuizBody(title: title)
+
             case "History Quiz":
-                Text("Dive into the past with our History Quiz!")
-                    .font(.title2)
-                    .multilineTextAlignment(.center)
-                    .padding()
-            default:
+                QuizBody(title: title)
+
+            default: 
                 Text("Get ready for an exciting quiz!")
                     .font(.title2)
                     .multilineTextAlignment(.center)
